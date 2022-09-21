@@ -20,6 +20,7 @@ namespace LoopÖvning2022_09_21
                 "\n\t: ");
             int.TryParse(Console.ReadLine(), out int num);
             Console.Write("\n");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             int k;
             int[] random = new int[3];
             random[0] = rd.Next(num / 2, num);
@@ -31,7 +32,7 @@ namespace LoopÖvning2022_09_21
                 for (int a = 0; a < 3; a++)
                 {
                     k = num + 1;
-                    //toppen av granen
+                    //Toppen av gran
                     if (a == 0)
                     {
                         for (int i = 0; i < random[a]; i++)
@@ -39,7 +40,7 @@ namespace LoopÖvning2022_09_21
                             int randomLights = rd.Next(1, num);
                             int randomLights2 = rd.Next(1, num);
                             k--;
-                            //vänstersida gran
+                            //Vänstersida gran
                             Console.Write("\t");
                             for (int x = k; x > 1; x--)
                             {
@@ -51,7 +52,7 @@ namespace LoopÖvning2022_09_21
                                 {
                                     Console.ForegroundColor = GetRandomConsoleColor();
                                     Console.Write("o");
-                                    Console.ForegroundColor = ConsoleColor.White; 
+                                    Console.ForegroundColor = ConsoleColor.DarkGreen; 
                                 }
                                 else
                                 {
@@ -66,7 +67,7 @@ namespace LoopÖvning2022_09_21
                                 {
                                     Console.ForegroundColor = GetRandomConsoleColor();
                                     Console.Write("o");
-                                    Console.ForegroundColor = ConsoleColor.White; 
+                                    Console.ForegroundColor = ConsoleColor.DarkGreen; 
                                 }
                                 else
                                 {
@@ -81,7 +82,7 @@ namespace LoopÖvning2022_09_21
                         }
                     }
 
-                    //undre delarna av granen
+                    //Undre delarna av granen
                     else
                     {
                         for (int i = random[a]; i < num; i++)
@@ -89,7 +90,7 @@ namespace LoopÖvning2022_09_21
                             int randomLights = rd.Next(1, num);
                             int randomLights2 = rd.Next(1, num);
                             k--;
-                            //vänstersida gran
+                            //Vänstersida gran
                             Console.Write("\t");
                             for (int x = k - random[a]; x > 1; x--)
                             {
@@ -101,7 +102,7 @@ namespace LoopÖvning2022_09_21
                                 {
                                     Console.ForegroundColor = GetRandomConsoleColor();
                                     Console.Write("o");
-                                    Console.ForegroundColor = ConsoleColor.White;
+                                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                                 }
                                 else
                                 {
@@ -116,7 +117,7 @@ namespace LoopÖvning2022_09_21
                                 {
                                     Console.ForegroundColor = GetRandomConsoleColor();
                                     Console.Write("o");
-                                    Console.ForegroundColor = ConsoleColor.White;
+                                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                                 }
                                 else
                                 {
