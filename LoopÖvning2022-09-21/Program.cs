@@ -133,7 +133,7 @@ namespace LoopÖvning2022_09_21
                     }
                 }
                 //Console.ReadLine();
-                Thread.Sleep(666);
+                Thread.Sleep(1000);
                 Console.Clear();
             } while (true);
         }
