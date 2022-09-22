@@ -11,7 +11,7 @@ namespace LoopÖvning2022_09_21
             var consoleColors = Enum.GetValues(typeof(ConsoleColor));
             return (ConsoleColor)consoleColors.GetValue(_random.Next(consoleColors.Length));
         }
-        
+
 
         static void Main(string[] args)
         {
