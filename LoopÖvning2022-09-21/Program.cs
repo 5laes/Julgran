@@ -11,7 +11,7 @@ namespace LoopÖvning2022_09_21
             var consoleColors = Enum.GetValues(typeof(ConsoleColor));
             return (ConsoleColor)consoleColors.GetValue(_random.Next(consoleColors.Length));
         }
-        
+
 
         static void Main(string[] args)
         {
@@ -133,7 +133,7 @@ namespace LoopÖvning2022_09_21
                     }
                 }
                 //Console.ReadLine();
-                Thread.Sleep(500);
+                Thread.Sleep(666);
                 Console.Clear();
             } while (true);
         }
