@@ -111,8 +111,8 @@ namespace LoopÖvning2022_09_21
                         for (int i = divNumUnder; i < num; i++)
                         {
                             //Genererar random position för lamporna
-                            int randomLights = rd.Next(1, divNumUpper);
-                            int randomLights2 = rd.Next(1, divNumUpper);
+                            int randomLights = rd.Next(1, divNumUnder);
+                            int randomLights2 = rd.Next(1, divNumUnder);
 
                             //Används för att centrera alla "grenar" av granen
                             k--;
