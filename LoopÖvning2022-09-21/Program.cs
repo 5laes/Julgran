@@ -5,6 +5,7 @@ namespace LoopÖvning2022_09_21
 {
     class Program
     {
+        //Metod som genererar random konsoltextfärg
         private static Random _random = new Random();
         private static ConsoleColor GetRandomConsoleColor()
         {
@@ -21,29 +22,41 @@ namespace LoopÖvning2022_09_21
             int.TryParse(Console.ReadLine(), out int num);
             Console.Write("\n");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+            //Används för att centrera alla "grenar" av granen
             int k;
-            /*
-            int[] random = new int[3];
-            random[0] = rd.Next(num / 3, (num / 3) * 2);
-            random[1] = rd.Next((num / 4) * 2, (num / 4) * 3);
-            random[2] = rd.Next((num / 4) * 2, (num / 4) * 3);
-            */
+
+            //Bestämmer toppen av granens storlek
             int divNumUpper = num / 3;
+            //Besttämmer undre delen av granens storlek
             int divNumUnder = (num / 3) * 2;
 
+            //Gör att granens undre del altid blir ett ojämnt tal så granen inte blir skev
+            if ((divNumUnder / 2) % 2 != 0)
+            {
+                divNumUnder--;
+            }
+
+            //Printar granen
             do
             {
                 for (int a = 0; a < 3; a++)
                 {
+                    //Används för att centrera alla "grenar" av granen
                     k = num + 1;
+
                     //Toppen av gran
                     if (a == 0)
                     {
                         for (int i = 0; i < divNumUpper; i++)
                         {
+                            //Genererar random position för lamporna
                             int randomLights = rd.Next(1, divNumUpper);
                             int randomLights2 = rd.Next(1, divNumUpper);
+
+                            //Används för att centrera alla "grenar" av granen
                             k--;
+
                             //Vänstersida gran
                             Console.Write("\t");
                             for (int x = k - (divNumUnder + divNumUpper) / 2; x > 1; x--)
@@ -91,9 +104,13 @@ namespace LoopÖvning2022_09_21
                     {
                         for (int i = divNumUnder; i < num; i++)
                         {
+                            //Genererar random position för lamporna
                             int randomLights = rd.Next(1, divNumUpper);
                             int randomLights2 = rd.Next(1, divNumUpper);
+
+                            //Används för att centrera alla "grenar" av granen
                             k--;
+
                             //Vänstersida gran
                             Console.Write("\t");
                             for (int x = k - divNumUnder; x > 1; x--)
