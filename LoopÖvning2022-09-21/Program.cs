@@ -23,6 +23,12 @@ namespace LoopÖvning2022_09_21
             Console.Write("\n");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 
+            //Är num mindre än tre krashar programmet
+            if (num < 3)
+            {
+                num = 3;
+            }
+
             //Används för att centrera alla "grenar" av granen
             int k;
 
